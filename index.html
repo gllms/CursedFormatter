@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cursed Formatter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <textarea oninput="format(this.value)" rows="24">public class Permuter
+{
+    private static void permute(int n, char[] a)
+    {
+        if (n == 0)
+        {
+            System.out.println(String.valueOf(a));
+        }
+        else
+        {
+            for (int i = 0; i <= n; i++)
+            {
+                permute(n-1, a);
+                swap(a, n % 2 == 0 ? i : 0, n);
+            }
+        }
+    }
+    private static void swap(char[] a, int i, int j)
+    {
+        char saved = a[i];
+        a[i] = a[j];
+        a[j] = saved;
+    }
+}</textarea>
+    <pre id="output">public class Permuter                                {
+    private static void permute(int n, char[] a)     {
+        if (n == 0)                                  {
+            System.out.println(String.valueOf(a))    ;}
+        else                                         {
+            for (int i = 0; i <= n; i++)             {
+                permute(n-1, a)                      ;
+                swap(a, n % 2 == 0 ? i : 0, n)       ;}}}
+    private static void swap(char[] a, int i, int j) {
+        char saved = a[i]                            ;
+        a[i] = a[j]                                  ;
+        a[j] = saved                                 ;}}</pre>
+  <script src="cursedFormatter.js"></script>
+</body>
+</html>

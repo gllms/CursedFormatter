@@ -1,0 +1,6 @@
+textarea, pre                                                 {
+  font-size: 14px                                             ;}
+textarea                                                      {
+  width: 100%                                                 ;}
+pre                                                           {
+  font-family: 'Consolas', 'Courier New', Courier, monospace  ;}

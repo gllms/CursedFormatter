@@ -42,4 +42,4 @@ function format(text)                                                      {
   fixedLines.forEach((e, i) =>                                             {
     if (ends[i]) e = e.padEnd(longest + 1) + ends[i]                       ;
     if (typeof (e) != "undefined") result += e + "\n"                      ;});
-  document.querySelector("#output").innerHTML = result                     ;}
+  document.querySelector("#output").innerText = result                     ;}
